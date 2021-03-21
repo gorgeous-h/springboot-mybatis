@@ -1,0 +1,31 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /springboot-mybatis
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springbootmybatis?useSSL=false
+    username: root
+    password: root
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    encoding: UTF-8
+    mode: HTML5
+    cache: false
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+mybatis:
+  type-aliases-package: com.example.springbootmybatis.entity
+  
+logging:
+  level:
+    com:
+      example:
+        springbootmybatis:
+          mapper: debug
